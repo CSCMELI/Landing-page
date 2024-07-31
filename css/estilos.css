@@ -266,23 +266,21 @@ body {
 .gallery {
     position: relative;
     background-color: #e5e5f7;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1em;
 }
 
 .gallery__container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 1em;
 }
 
 .gallery__image {
-    display: none;
-    width: 100%;
+    display: inline-block;
+    width: 150%;
     height: auto;
-}
-
-.gallery__image.active {
-    display: block;
+    object-fit: cover;
 }
 
 .gallery__arrow {
@@ -440,21 +438,7 @@ body {
         justify-self: center;
     }
 
-    .testimony__container {
-        grid-template-columns: 30px 1fr 30px;
-    }
 
-    .testimony__body {
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content max-content;
-        gap: 3em;
-        justify-items: center;
-    }
-
-    .testimony__img {
-        width: 200px;
-        height: 200px;
-    }
 
     .questions__copy {
         width: 100%;
