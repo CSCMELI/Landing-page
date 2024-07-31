@@ -259,6 +259,8 @@ body {
     box-shadow: 0 0 1px rgba(0, 0, 0, .5);
 }
 
+/* Otros estilos previos */
+
 /* Gallery */
 
 .gallery {
@@ -267,44 +269,26 @@ body {
 }
 
 .gallery__container {
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    gap: 1em;
-    align-items: center;
-}
-
-.gallery__body {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2em;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
+    gap: 1em;
 }
 
-.gallery__body--show {
-    pointer-events: unset;
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.gallery__img {
+.gallery__image {
+    display: none;
     width: 100%;
     height: auto;
-    object-fit: cover;
+}
+
+.gallery__image.active {
+    display: block;
 }
 
 .gallery__arrow {
-    width: 90%;
+    width: 50px;
     cursor: pointer;
 }
-
-/* Questions */
-
-
 
 /* Footer */
 
