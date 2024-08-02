@@ -118,6 +118,19 @@ body {
     border-radius: 32px;
 }
 
+/* Mapa */
+.mapa {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 0 auto;
+}
+
 /* About */
 
 .about {
