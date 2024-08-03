@@ -73,13 +73,11 @@ body {
 }
 
 .nav__menu {
-    margin-left: auto;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 
 .nav__img {
-    display: block;
     width: 30px;
 }
 
@@ -426,7 +424,7 @@ body {
         top: 30px;
         right: 30px;
         display: block;
-        --show: block;
+       
     }
     .nav__link--menu .nav__items {
         list-style: none;

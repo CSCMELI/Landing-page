@@ -1,14 +1,14 @@
 // js/menu.js
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav__menu');
     const navLinks = document.querySelector('.nav__link');
     const navClose = document.querySelector('.nav__close');
 
-    navMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('nav__link--show');
+    navMenu.addEventListener('click', function () {
+        navLinks.classList.toggle('nav__link--menu--activate');
     });
 
-    navClose.addEventListener('click', () => {
-        navLinks.classList.remove('nav__link--show');
+    navClose.addEventListener('click', function() {
+        navLinks.classList.remove('nav__link--menu--activate');
     });
 });
