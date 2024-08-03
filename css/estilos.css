@@ -41,7 +41,7 @@ body {
     z-index: -1;
 }
 
-/* Nav */
+/* Estilos generales para la navegación */
 
 .nav {
     --padding-container: 0;
@@ -57,11 +57,9 @@ body {
 .nav__link {
     margin-left: auto;
     padding: 0;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    display: flex;
     gap: 2em;
-}
+    align-items: center;
 
 .nav__items {
     list-style: none;
@@ -71,18 +69,20 @@ body {
     color: #fff;
     text-decoration: none;
 }
-
+/* Menú hamburguesa */
 .nav__menu {
     cursor: pointer;
-    display: block;
+    display: none; /* Ocultar por defecto */
 }
 
 .nav__img {
     width: 30px;
 }
 
+/* Cerrar menú */
 .nav__close {
-    display: var(--show, none);
+    display: none;  /* Ocultar por defecto */
+}
 }
 
 /* Hero container */
@@ -388,12 +388,15 @@ body {
 }
 
 /* Media queries */
-
+/* Estilos para pantallas pequeñas */
 @media (max-width:800px) {
     .nav__menu {
-        display: block;
+        display: block; /* Mostrar menú hamburguesa */
     }
 
+    .nav__link {
+        display: none; /* Ocultar enlaces en fila */
+    }
     .nav__link--menu {
         position: fixed;
         background-color: #000;
@@ -434,6 +437,7 @@ body {
         transform: translateX(0);
         visibility: visible;
     }
+    
     .knowledge__container {
         grid-template-columns: 1fr;
     }
@@ -516,22 +520,18 @@ body {
     margin-top: 1rem;
 }
 
-@media (min-width: 768px) {
-    .nav__link--menu img {
-        display: block;
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 801px) {
+    .nav__link {
+        display: flex;
     }
 
-    .nav__link {
-        display: none;
+    .nav__menu {
+        display: none; /* Ocultar menú hamburguesa */
     }
 
     .nav__link--menu {
-        display: block;
-    }
-
-    .nav__close {
-        display: block;
-        cursor: pointer;
+        display: none;
     }
 
     .footer__container {
