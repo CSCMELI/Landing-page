@@ -303,8 +303,6 @@ body {
 
 /* Footer */
 
-
-
 .footer {
     background-color: #1D293F;
 }
@@ -432,7 +430,6 @@ body {
     }
     .nav__link--menu .nav__items {
         list-style: none;
-       
     }
     
     .nav__link--menu--activate {
@@ -441,7 +438,6 @@ body {
     }
     .knowledge__container {
         grid-template-columns: 1fr;
-
     }
 
     .price__table {
@@ -454,7 +450,6 @@ body {
         gap: 1em;
     }
 
-    
     .nav__link--footer {
         margin-bottom: 20px;
     }

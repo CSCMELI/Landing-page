@@ -1,17 +1,14 @@
-(function(){
-    const openButton = document.querySelector('.nav__menu');
-    const menu = document.querySelector('.nav__link');
-    const closeMenu = document.querySelector('.nav__close');
+// js/menu.js
+document.addEventListener('DOMContentLoaded', () => {
+    const navMenu = document.querySelector('.nav__menu');
+    const navLinks = document.querySelector('.nav__link');
+    const navClose = document.querySelector('.nav__close');
 
-    openButton.addEventListener('click', ()=>{
-        menu.classList.add('nav__link--show');
+    navMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('nav__link--show');
     });
 
-    closeMenu.addEventListener('click', ()=>{
-        menu.classList.remove('nav__link--show');
+    navClose.addEventListener('click', () => {
+        navLinks.classList.remove('nav__link--show');
     });
-
-    
-
-
-})();
+});
