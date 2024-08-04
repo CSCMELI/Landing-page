@@ -17,16 +17,14 @@ body {
     padding: var(--padding-container);
 }
 
-/* Estilos básicos */
 .hero {
     width: 100%;
     height: 100vh;
     min-height: 600px;
     max-height: 800px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 100px 1fr;
     color: #fff;
 }
 
@@ -46,32 +44,34 @@ body {
 /* Estilos generales para la navegación */
 
 .nav {
+    --padding-container: 0;
+    height: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding: 20px;
     align-items: center;
-    width: 100%;
 }
 
+.nav__title {
+    font-weight: 300;
+}
 
 .nav__link {
-    list-style: none;
-    margin: 0;
+    margin-left: auto;
     padding: 0;
     display: flex;
-    
+    gap: 2em;
+    align-items: center;
 
 .nav__items {
-    margin: 0 10px;
+    list-style: none;
 }
 
 .nav__links {
     color: #fff;
     text-decoration: none;
-    font-weight: 300;
 }
 /* Menú hamburguesa */
 .nav__menu {
+    cursor: pointer;
     display: none; /* Ocultar por defecto */
 }
 
@@ -390,12 +390,12 @@ body {
 /* Media queries */
 /* Estilos para pantallas pequeñas */
 @media (max-width:800px) {
-    .nav__link {
-        display: none; /* Ocultar enlaces en fila */
-    }
-
     .nav__menu {
         display: block; /* Mostrar menú hamburguesa */
+    }
+
+    .nav__link {
+        display: none; /* Ocultar enlaces en fila */
     }
     .nav__link--menu {
         position: fixed;
