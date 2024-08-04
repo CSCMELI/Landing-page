@@ -58,8 +58,7 @@ body {
     margin-left: auto;
     padding: 0;
     display: flex;
-    gap: 2em;
-    align-items: center;
+    gap: 3rem;
 }
 
 .nav__items {
@@ -67,11 +66,18 @@ body {
 }
 
 .nav__links {
-    color: #fff;
     text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .3s;
 }
 
-/* Menú responsive */
+.nav__links:hover {
+    color: #2091F9;
+}
+
+/* Navegación responsiva */
 
 .nav__link--menu {
     display: none;
@@ -99,6 +105,11 @@ body {
     right: 20px;
     top: 20px;
     cursor: pointer;
+    display: none;
+}
+
+.nav__close.show {
+    display: block;
 }
 
 .nav__menu {
@@ -124,6 +135,10 @@ body {
         flex-direction: row;
         justify-content: initial;
         align-items: initial;
+    }
+
+    .nav__close {
+        display: none;
     }
 }
 

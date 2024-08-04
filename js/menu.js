@@ -1,14 +1,17 @@
-// js/menu.js
-document.addEventListener('DOMContentLoaded', function() {
-    const navMenu = document.querySelector('.nav__menu');
-    const navLinks = document.querySelector('.nav__link');
-    const navClose = document.querySelector('.nav__close');
+// JavaScript para manejar la apertura y cierre del menú de navegación
 
-    navMenu.addEventListener('click', function () {
-        navLinks.classList.toggle('nav__link--menu--activate');
-    });
+const navMenu = document.getElementById('nav-menu');
+const navClose = document.getElementById('nav-close');
+const navLinkMenu = document.querySelector('.nav__link--menu');
 
-    navClose.addEventListener('click', function() {
-        navLinks.classList.remove('nav__link--menu--activate');
-    });
+// Mostrar el menú de navegación y el icono de cerrar al hacer clic en el icono de menú
+navMenu.addEventListener('click', () => {
+    navLinkMenu.classList.add('nav__link--show');
+    navClose.classList.add('show');
+});
+
+// Ocultar el menú de navegación y el icono de cerrar al hacer clic en el icono de cerrar
+navClose.addEventListener('click', () => {
+    navLinkMenu.classList.remove('nav__link--show');
+    navClose.classList.remove('show');
 });
