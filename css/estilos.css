@@ -47,34 +47,31 @@ body {
 
 .nav {
     display: flex;
-    padding:0;
-    height: 100%;
-    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
     align-items: center;
+    width: 100%;
 }
 
-.nav__title {
-    font-weight: 300;
-}
 
 .nav__link {
-    margin-left: auto;
+    list-style: none;
+    margin: 0;
     padding: 0;
     display: flex;
-    gap: 2em;
-    align-items: center;
+    
 
 .nav__items {
-    list-style: none;
+    margin: 0 10px;
 }
 
 .nav__links {
     color: #fff;
     text-decoration: none;
+    font-weight: 300;
 }
 /* Menú hamburguesa */
 .nav__menu {
-    cursor: pointer;
     display: none; /* Ocultar por defecto */
 }
 
@@ -393,12 +390,12 @@ body {
 /* Media queries */
 /* Estilos para pantallas pequeñas */
 @media (max-width:800px) {
-    .nav__menu {
-        display: block; /* Mostrar menú hamburguesa */
-    }
-
     .nav__link {
         display: none; /* Ocultar enlaces en fila */
+    }
+
+    .nav__menu {
+        display: block; /* Mostrar menú hamburguesa */
     }
     .nav__link--menu {
         position: fixed;
